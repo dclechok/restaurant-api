@@ -1,4 +1,4 @@
-# Capstone: Restaurant Reservation System Frontend
+# Capstone: Restaurant Reservation System Backend
 
 This is the completed backend (RESTful API) to my Restaurant Reservation System application.
 
