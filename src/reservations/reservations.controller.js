@@ -5,8 +5,8 @@
  const knex = require('../db/connection');
  // const reservationService = require('./reservations.service');
  
- const DATE_FORMAT = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/; //valid regex formatting for date '2021-10-10'
- const TIME_FORMAT = /^(0?[1-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;  //valid regex formatting for time '10:20'
+//  const DATE_FORMAT = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/; //valid regex formatting for date '2021-10-10'
+//  const TIME_FORMAT = /^(0?[1-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;  //valid regex formatting for time '10:20'
  //TIME_FORMAT.test(reservation_time)
  // START VALIDATION MIDDLEWARE
  function bodyHasResultProperty(req, res, next) {
@@ -14,7 +14,7 @@
    if(data) return next(); //if body exists - move to validate body
    next({ status: 400, message: "A 'result' property is required." });
  }
- 
+
  function validateReservation(req, res, next){
    const { first_name, last_name, mobile_number, reservation_date, reservation_time, people } = req.body.data;
    //validate each separate piece of the requests body data
