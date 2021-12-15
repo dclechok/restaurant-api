@@ -59,7 +59,7 @@
  function validateNoTuesdayReservation(req, res, next){
    //we are closed on Tuesday's
    const resDate = res.locals.resDate;
-   if(resDate.getDay() === 1) return next({ //0-6 Sun-Sat in documentation, for some reason we are 0-6 Mon-Sun?
+   if(resDate.getDay() === 2) return next({ //0-6 Sun-Sat in documentation, for some reason we are 0-6 Mon-Sun?
      status: 400, message: 'Sorry, we are closed on Tuesday.',
    });
    next();
